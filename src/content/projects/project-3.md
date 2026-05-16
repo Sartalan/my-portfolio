@@ -1,8 +1,8 @@
 ---
 inProgress: false
-title: Project title
-description: Project description
+title: Robot Pingüino   
+description: Robot Pingüino desarrollado y simulado en ROS [...]  
 img_alt: project image alt text
-link: https://github.com/veranikabarel?tab=repositories
-tags: ['React', 'CSS', 'Typescript']
+link: https://sartalan.github.io/PinguBot-WebPage/ 
+tags: ['ROS', 'C++', 'Linux']
 ---
