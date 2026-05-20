@@ -1,6 +1,7 @@
 ---
 import Card from '@components/ui/Card.astro';
 import { getCollection } from 'astro:content';
+import projectImage from '@assets/images/project.png';
 
 const projects = await getCollection('projects', ({ data }) => {
 	return !data.inProgress;
@@ -13,9 +14,36 @@ const projects = await getCollection('projects', ({ data }) => {
 	class="mb-10 flex flex-col items-center justify-center md:mb-0 md:h-screen"
 >
 	<h2 class="font-monospace text-2xl text-orange lg:text-4xl">Proyectos</h2>
-	<span class="mb-10 h-1 w-10 bg-orange"></span>
+  <span class="mb-10 h-1 w-10 bg-orange"></span>
+
 	<div class="mb-10 flex w-full flex-col flex-wrap items-center md:flex-row">
-		{
+    
+
+    <Card 
+      url="https://sartalan.github.io/Hidroponia-Project/" 
+      title="Hidroponia" 
+      description="Una Hidroponia completamente automatizada y monitoreada vía una aplicación web y de celular." 
+      alt="Hidroponia" 
+      tags={['Typescript', 'Python', 'C++']}
+      icono="/src/assets/images/plant.png"
+    />
+    <Card 
+      url="https://sartalan.github.io/Spectrum-Messinalbot.page/" 
+      title="Robot Futbolista" 
+      description="Robot controlable por una aplicación web vía Websockets para la Liga Nacional de Robótica Argentina (LNR)." 
+      alt="Robot Futbolista" tags={['C++', 'Javascript']}
+      icono="/src/assets/images/robot.svg"
+    />
+    <Card 
+      url="https://sartalan.github.io/PinguBot-WebPage/" 
+      title="Robot Pingüino" 
+      description="Robot Pingüino desarrollado y simulado en ROS [...]" 
+      alt="#" tags={['ROS', 'C++', 'Linux']}
+      icono="/src/assets/images/penguin.svg"
+    />
+
+<!--
+    {
 			projects.map((project) => (
       <Card
 					url={project.data.link}
@@ -25,7 +53,8 @@ const projects = await getCollection('projects', ({ data }) => {
 					tags={project.data.tags}
 				/>
 			))
-		}
+}
+-->
 	</div>
   <a
 		href="https://github.com/Sartalan"
